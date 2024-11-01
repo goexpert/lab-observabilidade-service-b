@@ -1,4 +1,4 @@
-package dto
+package pkg
 
 type ResponseDTO struct {
 	Celcius    float32

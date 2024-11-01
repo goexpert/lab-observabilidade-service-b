@@ -8,7 +8,7 @@ import (
 	"net/url"
 
 	"github.com/goexpert/lab-observabilidade-service-b/internal/dto"
-	pkg "github.com/goexpert/lab-observabilidade-service-b/pkg/dto"
+	"github.com/goexpert/lab-observabilidade-service-b/pkg"
 )
 
 func (s *Server) RegisterRoutes() http.Handler {
