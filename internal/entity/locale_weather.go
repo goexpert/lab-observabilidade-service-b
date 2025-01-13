@@ -6,7 +6,7 @@ import (
 	"math"
 	"strings"
 
-	"github.com/goexpert/lab-observabilidade-service-b/internal/dto"
+	lab "github.com/goexpert/labobservabilidade"
 )
 
 type localeWeatherEntity struct {
@@ -24,7 +24,7 @@ func (w *localeWeatherEntity) Locale() string {
 	return w.locale
 }
 
-func NewLocaleWeather(locale string, tempC float64) (*dto.LocalWeatherDto, error) {
+func NewLocaleWeather(locale string, tempC float64) (*lab.LocaleWeatherDto, error) {
 
 	locale = strings.TrimSpace(locale)
 
@@ -42,7 +42,7 @@ func NewLocaleWeather(locale string, tempC float64) (*dto.LocalWeatherDto, error
 		return nil, err
 	}
 
-	return &dto.LocalWeatherDto{
+	return &lab.LocaleWeatherDto{
 		Locale: tc.locale,
 		TempC:  math.Round((tc.tempC)*10) / 10,
 		TempF:  math.Round((tc.tempC*1.8+32)*10) / 10,

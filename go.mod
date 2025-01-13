@@ -3,7 +3,7 @@ module github.com/goexpert/lab-observabilidade-service-b
 go 1.22.8
 
 require (
-	github.com/goexpert/labobservabilidade v0.0.4
+	github.com/goexpert/labobservabilidade v0.0.6
 	go.opentelemetry.io/otel v1.33.0
 )
 
